@@ -1,4 +1,4 @@
--module(ik).
+-module(includeTimes).
 -export([arraysElement/2, patternInArray/2, patternInArrayTimes/2]).
 
 patternInArrayTimes(T,P) -> 
