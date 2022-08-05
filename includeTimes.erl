@@ -1,7 +1,8 @@
 -module(includeTimes).
 -export([arraysElement/2, patternInArray/2, patternInArrayTimes/2]).
 
-patternInArrayTimes(T,P) -> 
+patternInArrayTimes(_, []) -> -1;
+patternInArrayTimes(T, P) -> 
 	{FOUND, REM} = patternInArray(T, P),
 	case FOUND of
 	 true -> patternInArrayTimes(REM, P) + 1;

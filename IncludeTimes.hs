@@ -1,6 +1,7 @@
 module IncludeTimes (includesTimes, includesPattern, includesElement) where
 
 includesTimes :: Eq a => [a] -> [a] -> Int
+includesTimes s [] = -1
 includesTimes s p
  | fst inc = (includesTimes (snd inc) p) + 1
  | not (fst inc) = 0
